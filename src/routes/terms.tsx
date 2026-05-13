@@ -4,17 +4,17 @@ import { PolicyPage, PolicySection } from "@/components/PolicyPage";
 export const Route = createFileRoute("/terms")({
   head: () => ({
     meta: [
-      { title: "Terms of Service — Kavitha PG Hotel" },
-      { name: "description", content: "Terms of Service governing your stay at Kavitha PG Hotel." },
-      { property: "og:title", content: "Terms of Service — Kavitha PG Hotel" },
-      { property: "og:description", content: "The terms governing bookings and stays at Kavitha PG Hotel." },
+      { title: "Terms of Service — Kavitha PG Hostel" },
+      { name: "description", content: "Terms of Service governing your stay at Kavitha PG Hostel." },
+      { property: "og:title", content: "Terms of Service — Kavitha PG Hostel" },
+      { property: "og:description", content: "The terms governing bookings and stays at Kavitha PG Hostel." },
     ],
   }),
   component: () => (
     <PolicyPage title="Terms of Service" updated="May 13, 2026">
       <p>
         These Terms of Service ("Terms") govern your booking, occupancy and use
-        of facilities at Kavitha PG Hotel ("we", "us", "our"). By confirming a
+        of facilities at Kavitha PG Hostel ("we", "us", "our"). By confirming a
         booking or moving in, you agree to be bound by these Terms.
       </p>
       <PolicySection heading="1. Eligibility & Booking">
@@ -30,7 +30,7 @@ export const Route = createFileRoute("/terms")({
         <p>The premises are to be used solely for personal residential purposes. Commercial activity, sub-letting, or hosting overnight guests without prior approval is strictly prohibited.</p>
       </PolicySection>
       <PolicySection heading="5. Liability">
-        <p>Kavitha PG Hotel is not liable for loss, theft or damage to personal belongings. Guests are encouraged to use lockers and insure valuable items.</p>
+        <p>Kavitha PG Hostel is not liable for loss, theft or damage to personal belongings. Guests are encouraged to use lockers and insure valuable items.</p>
       </PolicySection>
       <PolicySection heading="6. Termination">
         <p>We reserve the right to terminate the stay of any guest violating these Terms or the House Rules, with appropriate notice.</p>

@@ -4,9 +4,9 @@ import { PolicyPage, PolicySection } from "@/components/PolicyPage";
 export const Route = createFileRoute("/house-rules")({
   head: () => ({
     meta: [
-      { title: "House Rules — Kavitha PG Hotel" },
-      { name: "description", content: "House rules to keep Kavitha PG Hotel safe, clean and comfortable for everyone." },
-      { property: "og:title", content: "House Rules — Kavitha PG Hotel" },
+      { title: "House Rules — Kavitha PG Hostel" },
+      { name: "description", content: "House rules to keep Kavitha PG Hostel safe, clean and comfortable for everyone." },
+      { property: "og:title", content: "House Rules — Kavitha PG Hostel" },
       { property: "og:description", content: "Simple rules that keep our PG safe and comfortable." },
     ],
   }),

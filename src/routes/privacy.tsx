@@ -4,9 +4,9 @@ import { PolicyPage, PolicySection } from "@/components/PolicyPage";
 export const Route = createFileRoute("/privacy")({
   head: () => ({
     meta: [
-      { title: "Privacy Policy — Kavitha PG Hotel" },
-      { name: "description", content: "How Kavitha PG Hotel collects, uses and protects your personal information." },
-      { property: "og:title", content: "Privacy Policy — Kavitha PG Hotel" },
+      { title: "Privacy Policy — Kavitha PG Hostel" },
+      { name: "description", content: "How Kavitha PG Hostel collects, uses and protects your personal information." },
+      { property: "og:title", content: "Privacy Policy — Kavitha PG Hostel" },
       { property: "og:description", content: "Our commitment to safeguarding your personal information." },
     ],
   }),
