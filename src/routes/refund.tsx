@@ -4,9 +4,9 @@ import { PolicyPage, PolicySection } from "@/components/PolicyPage";
 export const Route = createFileRoute("/refund")({
   head: () => ({
     meta: [
-      { title: "Refund & Cancellation Policy — Kavitha PG Hotel" },
-      { name: "description", content: "Refund and cancellation terms for bookings at Kavitha PG Hotel." },
-      { property: "og:title", content: "Refund & Cancellation Policy — Kavitha PG Hotel" },
+      { title: "Refund & Cancellation Policy — Kavitha PG Hostel" },
+      { name: "description", content: "Refund and cancellation terms for bookings at Kavitha PG Hostel." },
+      { property: "og:title", content: "Refund & Cancellation Policy — Kavitha PG Hostel" },
       { property: "og:description", content: "Our refund and cancellation terms in plain language." },
     ],
   }),

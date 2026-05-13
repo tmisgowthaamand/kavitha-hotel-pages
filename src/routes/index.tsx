@@ -7,13 +7,13 @@ import loungeImg from "@/assets/lounge.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Kavitha PG Hotel — Comfortable PG Stays in Bengaluru" },
+      { title: "Kavitha PG Hostel — Comfortable PG Stays in Bengaluru" },
       {
         name: "description",
         content:
-          "Kavitha PG Hotel offers safe, hygienic and homely paying guest accommodation in Bengaluru with home-cooked meals, Wi-Fi and 24/7 security.",
+          "Kavitha PG Hostel offers safe, hygienic and homely paying guest accommodation in Bengaluru with home-cooked meals, Wi-Fi and 24/7 security.",
       },
-      { property: "og:title", content: "Kavitha PG Hotel — Homely PG Stays" },
+      { property: "og:title", content: "Kavitha PG Hostel — Homely PG Stays" },
       { property: "og:description", content: "Safe rooms, hot meals, fast Wi-Fi. Book your stay today." },
     ],
   }),
@@ -43,7 +43,7 @@ function Home() {
               Apna ghar, Bengaluru mein.
             </h1>
             <p className="mt-4 text-lg text-muted-foreground">
-              Kavitha PG Hotel is a family-run paying guest residence in the heart of
+              Kavitha PG Hostel is a family-run paying guest residence in the heart of
               Bengaluru — clean rooms, ghar ka khana, and the warmth of an Indian
               joint family. Stay with us, feel at home.
             </p>
@@ -70,7 +70,7 @@ function Home() {
           <div className="relative">
             <img
               src={heroImg}
-              alt="Kavitha PG Hotel building exterior at golden hour"
+              alt="Kavitha PG Hostel building exterior at golden hour"
               width={1600}
               height={1024}
               className="h-full w-full rounded-3xl object-cover shadow-xl"
