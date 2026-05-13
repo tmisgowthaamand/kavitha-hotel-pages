@@ -21,12 +21,12 @@ export const Route = createFileRoute("/")({
 });
 
 const features = [
-  { title: "Home-cooked Meals", desc: "Three fresh meals a day, South Indian comfort food." },
-  { title: "High-Speed Wi-Fi", desc: "Stable broadband across rooms and common areas." },
-  { title: "24/7 Security", desc: "CCTV coverage, biometric entry and a watchful warden." },
-  { title: "Daily Housekeeping", desc: "Clean rooms, fresh linens and tidy shared spaces." },
-  { title: "Power Backup", desc: "Full inverter backup so work and study never stop." },
-  { title: "Prime Location", desc: "Walking distance to metro, IT parks and grocery stores." },
+  { title: "Ghar Jaisa Khana", desc: "Three fresh home-style meals daily — sambar, rasam, chapati, sabzi and curd rice." },
+  { title: "High-Speed Wi-Fi", desc: "Stable broadband across rooms and common areas, perfect for work and study." },
+  { title: "24/7 Suraksha", desc: "CCTV, biometric entry and a watchful warden — your safety is our promise." },
+  { title: "Daily Housekeeping", desc: "Clean rooms, fresh bedsheets and tidy shared spaces, every single day." },
+  { title: "Power Backup", desc: "Full inverter backup so studies and Zoom calls never stop." },
+  { title: "Prime Location", desc: "Walking distance to BMTC bus stop, metro, offices and kirana stores." },
 ];
 
 function Home() {
@@ -37,14 +37,15 @@ function Home() {
         <div className="mx-auto grid max-w-6xl gap-10 px-5 py-16 md:grid-cols-2 md:py-24">
           <div className="flex flex-col justify-center">
             <span className="inline-flex w-fit rounded-full bg-accent/30 px-3 py-1 text-xs font-medium text-accent-foreground">
-              Now accepting bookings · Bengaluru
+              Namaste · Now accepting bookings in Bengaluru
             </span>
             <h1 className="mt-4 text-4xl font-bold tracking-tight text-foreground md:text-5xl">
-              A homely PG stay you'll actually love coming back to.
+              Apna ghar, Bengaluru mein.
             </h1>
             <p className="mt-4 text-lg text-muted-foreground">
-              Kavitha PG Hotel is a warm, family-run paying guest residence with
-              clean rooms, home-cooked meals and a community that feels like home.
+              Kavitha PG Hotel is a family-run paying guest residence in the heart of
+              Bengaluru — clean rooms, ghar ka khana, and the warmth of an Indian
+              joint family. Stay with us, feel at home.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <a
@@ -61,8 +62,8 @@ function Home() {
               </a>
             </div>
             <div className="mt-8 flex gap-8 text-sm text-muted-foreground">
-              <div><div className="text-2xl font-bold text-foreground">12+</div>Years hosting</div>
-              <div><div className="text-2xl font-bold text-foreground">200+</div>Happy guests</div>
+              <div><div className="text-2xl font-bold text-foreground">12+</div>Saal of seva</div>
+              <div><div className="text-2xl font-bold text-foreground">200+</div>Happy residents</div>
               <div><div className="text-2xl font-bold text-foreground">4.8★</div>Avg. rating</div>
             </div>
           </div>
@@ -81,11 +82,11 @@ function Home() {
       {/* Features */}
       <section className="mx-auto max-w-6xl px-5 py-16">
         <h2 className="text-3xl font-bold tracking-tight text-foreground">
-          Everything you need, nothing you don't.
+          Sab kuch hai jo chahiye.
         </h2>
         <p className="mt-2 max-w-2xl text-muted-foreground">
-          We focus on the essentials — comfort, food, safety and connectivity — so
-          you can focus on work, study or simply relaxing.
+          Aaram, khana, suraksha aur internet — bas itna hi toh chahiye. We take
+          care of everything so you can focus on padhai, work or just unwinding.
         </p>
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((f) => (
@@ -99,12 +100,12 @@ function Home() {
 
       {/* Rooms gallery */}
       <section id="rooms" className="mx-auto max-w-6xl px-5 py-16">
-        <h2 className="text-3xl font-bold tracking-tight text-foreground">A look inside</h2>
+        <h2 className="text-3xl font-bold tracking-tight text-foreground">Ek jhalak andar ki</h2>
         <div className="mt-8 grid gap-6 md:grid-cols-3">
           {[
-            { img: roomImg, title: "Private Rooms", desc: "Single & sharing rooms with study desk and wardrobe." },
-            { img: foodImg, title: "Dining Hall", desc: "Hot meals served fresh, three times a day." },
-            { img: loungeImg, title: "Common Lounge", desc: "Unwind, read, or hang out with fellow residents." },
+            { img: roomImg, title: "Kamre (Rooms)", desc: "Single & sharing rooms with cot, almirah and study table." },
+            { img: foodImg, title: "Bhojanalaya", desc: "Hot South & North Indian thalis served three times a day." },
+            { img: loungeImg, title: "Baithak", desc: "Common hall with jhoola, festivals, chai and chitchat." },
           ].map((c) => (
             <div key={c.title} className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
               <img src={c.img} alt={c.title} loading="lazy" width={1280} height={896} className="h-56 w-full object-cover" />
@@ -120,10 +121,10 @@ function Home() {
       {/* CTA */}
       <section className="mx-auto max-w-6xl px-5 py-16">
         <div className="rounded-3xl bg-primary p-10 text-primary-foreground md:p-14">
-          <h2 className="text-3xl font-bold tracking-tight">Ready to move in?</h2>
+          <h2 className="text-3xl font-bold tracking-tight">Aa jaiye, ghar tayar hai.</h2>
           <p className="mt-2 max-w-xl opacity-90">
-            Schedule a free visit and tour the rooms, dining area and common spaces.
-            We'd love to host you.
+            Ek baar visit kijiye — kamre dekhiye, bhojanalaya ghoomiye, aur khud
+            mehsoos kijiye ki Kavitha PG aapka apna ghar kyun ban jata hai.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <a href="tel:+919999999999" className="rounded-full bg-background px-6 py-3 text-sm font-medium text-foreground hover:opacity-90">

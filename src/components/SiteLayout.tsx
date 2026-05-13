@@ -47,7 +47,7 @@ export function SiteFooter() {
         <div>
           <h3 className="font-semibold text-foreground">Kavitha PG Hotel</h3>
           <p className="mt-2 text-sm text-muted-foreground">
-            A safe, homely paying guest stay with hot meals, fast Wi-Fi and a caring host.
+            Aapka apna ghar in Bengaluru — safe rooms, ghar ka khana and a caring Indian family vibe.
           </p>
         </div>
         <div>
