@@ -1,35 +1,35 @@
 // Vercel serverless function to handle TanStack Start SSR
-import { createRequestHandler } from '@tanstack/react-start/server';
-
 export default async function handler(req, res) {
   try {
-    // Import the server entry
+    // Import the server entry (Cloudflare Workers format)
     const { default: serverEntry } = await import('../dist/server/index.js');
     
-    // Create request handler
-    const requestHandler = createRequestHandler({
-      build: serverEntry,
-    });
-
-    // Convert Vercel request to standard Request
-    const url = new URL(req.url || '/', `https://${req.headers.host}`);
-    const request = new Request(url, {
+    // Convert Vercel request to Web API Request
+    const protocol = req.headers['x-forwarded-proto'] || 'https';
+    const host = req.headers['x-forwarded-host'] || req.headers.host;
+    const url = new URL(req.url || '/', `${protocol}://${host}`);
+    
+    const request = new Request(url.toString(), {
       method: req.method,
       headers: new Headers(req.headers),
-      body: req.method !== 'GET' && req.method !== 'HEAD' ? req.body : undefined,
+      body: req.method !== 'GET' && req.method !== 'HEAD' ? JSON.stringify(req.body) : undefined,
     });
 
-    // Handle the request
-    const response = await requestHandler(request);
+    // Call the Cloudflare Workers-style fetch handler
+    const response = await serverEntry.fetch(request, {}, {});
     
-    // Convert Response to Vercel response
+    // Convert Web API Response to Vercel response
+    const body = await response.text();
+    
     response.headers.forEach((value, key) => {
       res.setHeader(key, value);
     });
+    
     res.status(response.status);
-    res.send(await response.text());
+    res.send(body);
   } catch (error) {
     console.error('Server error:', error);
-    res.status(500).send('Internal Server Error');
+    console.error(error.stack);
+    res.status(500).send(`Internal Server Error: ${error.message}`);
   }
 }

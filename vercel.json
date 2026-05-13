@@ -2,10 +2,23 @@
   "version": 2,
   "buildCommand": "npm run build",
   "installCommand": "npm install",
-  "rewrites": [
+  "functions": {
+    "api/index.js": {
+      "includeFiles": "dist/**"
+    }
+  },
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "/api/index"
+      "src": "/assets/(.*)",
+      "dest": "/dist/client/assets/$1"
+    },
+    {
+      "src": "/robots.txt",
+      "dest": "/dist/client/robots.txt"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/api/index"
     }
   ]
 }
