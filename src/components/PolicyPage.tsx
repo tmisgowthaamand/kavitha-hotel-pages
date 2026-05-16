@@ -1,4 +1,6 @@
 import type { ReactNode } from "react";
+import { Link } from "@tanstack/react-router";
+import { ArrowLeft } from "lucide-react";
 
 export function PolicyPage({
   title,
@@ -11,6 +13,13 @@ export function PolicyPage({
 }) {
   return (
     <article className="mx-auto max-w-3xl px-5 py-16">
+      <Link 
+        to="/" 
+        className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground mb-8 transition-colors"
+      >
+        <ArrowLeft className="h-4 w-4" />
+        Back to Home
+      </Link>
       <header>
         <p className="text-sm font-medium text-primary">Policy</p>
         <h1 className="mt-2 text-4xl font-bold tracking-tight text-foreground">{title}</h1>

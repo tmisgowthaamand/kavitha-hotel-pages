@@ -2,9 +2,6 @@ import { Link, Outlet } from "@tanstack/react-router";
 
 const nav = [
   { to: "/", label: "Home" },
-  { to: "/terms", label: "Terms" },
-  { to: "/privacy", label: "Privacy" },
-  { to: "/refund", label: "Refund" },
   { to: "/house-rules", label: "House Rules" },
 ];
 
@@ -14,7 +11,7 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
         <Link to="/" className="flex items-center gap-2">
           <span className="grid h-9 w-9 place-items-center rounded-full bg-primary text-primary-foreground font-bold">K</span>
-          <span className="font-semibold tracking-tight text-foreground">Kavitha PG</span>
+          <span className="font-semibold tracking-tight text-foreground">Kavitha Hostel</span>
         </Link>
         <nav className="hidden gap-6 md:flex">
           {nav.map((n) => (
@@ -41,11 +38,18 @@ export function SiteHeader() {
 }
 
 export function SiteFooter() {
+  const policyLinks = [
+    { to: "/terms", label: "Terms" },
+    { to: "/privacy", label: "Privacy" },
+    { to: "/refund", label: "Refund" },
+    { to: "/house-rules", label: "House Rules" },
+  ];
+
   return (
     <footer className="mt-24 border-t border-border bg-secondary/40">
       <div className="mx-auto grid max-w-6xl gap-8 px-5 py-12 md:grid-cols-3">
         <div>
-          <h3 className="font-semibold text-foreground">Kavitha PG Hostel</h3>
+          <h3 className="font-semibold text-foreground">Kavitha Hostel</h3>
           <p className="mt-2 text-sm text-muted-foreground">
             Aapka apna ghar in Bengaluru — safe rooms, ghar ka khana and a caring Indian family vibe.
           </p>
@@ -53,7 +57,7 @@ export function SiteFooter() {
         <div>
           <h4 className="text-sm font-semibold text-foreground">Policies</h4>
           <ul className="mt-2 space-y-1 text-sm">
-            {nav.slice(1).map((n) => (
+            {policyLinks.map((n) => (
               <li key={n.to}>
                 <Link to={n.to} className="text-muted-foreground hover:text-foreground">
                   {n.label}
@@ -72,7 +76,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-border py-4 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} Kavitha PG Hostel. All rights reserved.
+        © {new Date().getFullYear()} Kavitha Hostel. All rights reserved.
       </div>
     </footer>
   );
